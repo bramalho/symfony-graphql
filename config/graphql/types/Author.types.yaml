@@ -3,6 +3,8 @@ Author:
   config:
     resolveField: '@=resolver("App\\GraphQL\\Resolver\\AuthorResolver", [info, value, args])'
     fields:
+      id:
+        type: Int
       name:
         type: String
       email:

@@ -3,6 +3,8 @@ Post:
   config:
     resolveField: '@=resolver("App\\GraphQL\\Resolver\\PostResolver", [info, value, args])'
     fields:
+      id:
+        type: Int
       title:
         type: String
       body:

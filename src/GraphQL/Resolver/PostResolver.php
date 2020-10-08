@@ -30,6 +30,11 @@ class PostResolver implements ResolverInterface
         return $this->entityManager->find(Post::class, $id);
     }
 
+    public function id(Post $post): int
+    {
+        return $post->getId();
+    }
+
     public function title(Post $post): string
     {
         return $post->getTitle();

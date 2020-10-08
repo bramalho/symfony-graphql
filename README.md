@@ -14,17 +14,21 @@ composer install
 
 Go to [localhost/graphiql](http://localhost/graphiql)
 
+## Queries
+
 Author Query
 
 ```gql
 query {
     author(id: 1) {
+        id
         name
         email
         posts (first: 10){
             edges {
                 cursor
                 node {
+                    id
                     title
                     body
                 }
@@ -39,9 +43,11 @@ Post Query
 ```gql
 query {
     post(id: 1) {
+        id
         title
         body
         author {
+            id
             name
             email
         }
@@ -55,6 +61,7 @@ Author List Query
 query {
     author_list(limit: 5) {
         authors {
+            id
             name
             email
         }
@@ -68,9 +75,11 @@ Post List Query
 query {
     post_list(limit: 5) {
         posts {
+            id
             title
             body
             author {
+                id
                 name
                 email
             }

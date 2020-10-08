@@ -31,6 +31,11 @@ class AuthorResolver implements ResolverInterface
         return $this->entityManager->find(Author::class, $id);
     }
 
+    public function id(Author $author): int
+    {
+        return $author->getId();
+    }
+
     public function name(Author $author): string
     {
         return $author->getName();
