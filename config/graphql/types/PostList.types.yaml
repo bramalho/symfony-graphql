@@ -1,0 +1,6 @@
+PostList:
+  type: object
+  config:
+    fields:
+      posts:
+        type: "[Post]"

@@ -1,0 +1,6 @@
+AuthorList:
+  type: object
+  config:
+    fields:
+      authors:
+        type: "[Author]"

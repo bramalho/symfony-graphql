@@ -1,0 +1,28 @@
+Query:
+  type: object
+  config:
+    fields:
+      author:
+        type: Author
+        args:
+          id:
+            type: Int
+        resolve: '@=resolver("App\\GraphQL\\Resolver\\AuthorResolver::resolve", [args["id"]])'
+      author_list:
+        type: AuthorList
+        args:
+          limit:
+            type: Int
+        resolve: '@=resolver("App\\GraphQL\\Resolver\\AuthorListResolver::resolve", [args])'
+      post:
+        type: Post
+        args:
+          id:
+            type: Int
+        resolve: '@=resolver("App\\GraphQL\\Resolver\\PostResolver::resolve", [args["id"]])'
+      post_list:
+        type: PostList
+        args:
+          limit:
+            type: Int
+        resolve: '@=resolver("App\\GraphQL\\Resolver\\PostListResolver::resolve", [args])'

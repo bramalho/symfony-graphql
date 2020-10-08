@@ -1,0 +1,11 @@
+Post:
+  type: object
+  config:
+    resolveField: '@=resolver("App\\GraphQL\\Resolver\\PostResolver", [info, value, args])'
+    fields:
+      title:
+        type: String
+      body:
+        type: String
+      author:
+        type: Author

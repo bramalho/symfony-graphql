@@ -1,0 +1,12 @@
+Author:
+  type: object
+  config:
+    resolveField: '@=resolver("App\\GraphQL\\Resolver\\AuthorResolver", [info, value, args])'
+    fields:
+      name:
+        type: String
+      email:
+        type: String
+      posts:
+        type: PostConnection
+        argsBuilder: Relay::ForwardConnection
