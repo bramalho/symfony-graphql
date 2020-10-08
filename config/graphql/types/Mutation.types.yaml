@@ -22,3 +22,11 @@ Mutation:
         args:
           input:
             type: PostInput!
+      update_post:
+        type: Post!
+        resolve: '@=mutation("App\\GraphQL\\Mutation\\UpdatePostMutation::updatePost", [args])'
+        args:
+          id:
+            type: Int
+          input:
+            type: PostInput!
