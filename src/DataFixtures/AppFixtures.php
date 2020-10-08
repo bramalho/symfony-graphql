@@ -14,14 +14,29 @@ class AppFixtures extends Fixture
         $author = new Author();
         $author->setName('John Doe')
             ->setEmail('john@doe.com');
-
         $manager->persist($author);
 
         $post = new Post();
-        $post->setTitle('My First Post')
+        $post->setTitle('#1 My First Post')
             ->setBody('This is my first post!')
             ->setAuthor($author);
+        $manager->persist($post);
 
+        $post = new Post();
+        $post->setTitle('#2 My Second Post')
+            ->setBody('This is my second post!')
+            ->setAuthor($author);
+        $manager->persist($post);
+
+        $author = new Author();
+        $author->setName('Jane Doe')
+            ->setEmail('jane@doe.com');
+        $manager->persist($author);
+
+        $post = new Post();
+        $post->setTitle('#3 My First Post Jane')
+            ->setBody('This is my first post!')
+            ->setAuthor($author);
         $manager->persist($post);
 
         $manager->flush();
