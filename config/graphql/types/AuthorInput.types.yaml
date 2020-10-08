@@ -1,0 +1,8 @@
+AuthorInput:
+  type: input-object
+  config:
+    fields:
+      name:
+        type: String
+      email:
+        type: String

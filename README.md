@@ -87,3 +87,24 @@ query {
     }
 }
 ```
+
+## Mutations
+
+```gql
+mutation($input: AuthorInput!) {
+  create_author(input: $input){
+    id,
+    name,
+    email
+  }
+}
+```
+
+```json
+{
+ "input": {
+  	"name": "Author 1",
+  	"email": "one@author.com"
+	}
+}
+```

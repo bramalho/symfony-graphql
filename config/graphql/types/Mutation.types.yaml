@@ -1,0 +1,10 @@
+Mutation:
+  type: object
+  config:
+    fields:
+      create_author:
+        type: Author!
+        resolve: '@=mutation("App\\GraphQL\\Mutation\\CreateAuthorMutation::createAuthor", [args])'
+        args:
+          input:
+            type: AuthorInput!
