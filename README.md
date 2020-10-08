@@ -11,3 +11,5 @@ composer install
 
 ./bin/console doctrine:fixtures:load
 ```
+
+Go to [localhost](http://localhost)
