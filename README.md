@@ -160,3 +160,31 @@ mutation($input: PostInput!) {
     }
 }
 ```
+
+Update Post Mutation
+
+```gql
+mutation($id: Int, $input: PostInput!) {
+    update_post(id: $id,input: $input){
+        id
+        title
+        body
+        author {
+            id
+            name
+            email
+        }
+    }
+}
+```
+
+```json
+{
+    "id": 4,
+    "input": {
+        "author": 3,
+        "title": "My New Post",
+        "body": "This is my new post!"
+    }
+}
+```
