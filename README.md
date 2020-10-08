@@ -90,21 +90,51 @@ query {
 
 ## Mutations
 
+Create Author Mutation
+
 ```gql
 mutation($input: AuthorInput!) {
-  create_author(input: $input){
-    id,
-    name,
-    email
-  }
+    create_author(input: $input){
+        id
+        name
+        email
+    }
 }
 ```
 
 ```json
 {
- "input": {
-  	"name": "Author 1",
-  	"email": "one@author.com"
+    "input": {
+        "name": "Author 1",
+        "email": "one@author.com"
 	}
+}
+```
+
+Create Post Mutation
+
+```gql
+mutation($input: PostInput!) {
+    create_post(input: $input){
+        id
+        title
+        body
+        author {
+            id
+            name
+            email
+        }
+    }
+}
+
+```
+
+```json
+{
+    "input": {
+        "author": 1,
+        "title": "My Post",
+        "body": "This is my post!"
+    }
 }
 ```

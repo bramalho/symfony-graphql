@@ -8,3 +8,9 @@ Mutation:
         args:
           input:
             type: AuthorInput!
+      create_post:
+        type: Post!
+        resolve: '@=mutation("App\\GraphQL\\Mutation\\CreatePostMutation::createPost", [args])'
+        args:
+          input:
+            type: PostInput!

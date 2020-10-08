@@ -1,0 +1,10 @@
+PostInput:
+  type: input-object
+  config:
+    fields:
+      author:
+        type: Int
+      title:
+        type: String
+      body:
+        type: String
